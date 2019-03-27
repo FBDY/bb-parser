@@ -1,19 +1,17 @@
-# scratch-parser
+# bb-parser
 
-#### Parser for Scratch projects
+#### Parser for BBGE projects
 
-[![Build Status](https://travis-ci.org/LLK/scratch-parser.svg?branch=develop)](https://travis-ci.org/LLK/scratch-parser)
-[![dependencies Status](https://david-dm.org/llk/scratch-parser/status.svg)](https://david-dm.org/llk/scratch-parser)
-[![devDependencies Status](https://david-dm.org/llk/scratch-parser/dev-status.svg)](https://david-dm.org/llk/scratch-parser?type=dev)
+[![Build Status](https://travis-ci.org/FBDY/bb-parser.svg?branch=develop)](https://travis-ci.org/FBDY/bb-parser)
 
 ## Overview
-The Scratch Parser is a [Node.js](https://nodejs.org) module that parses and validates [Scratch](https://scratch.mit.edu) projects.
+The bb-parser is a [Node.js](https://nodejs.org) module that parses and validates BBGE projects.
 
 ## API
 
 #### Installation
 ```bash
-npm install scratch-parser
+npm install bb-parser
 ```
 
 #### Basic Use

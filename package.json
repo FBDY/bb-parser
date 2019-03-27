@@ -1,13 +1,13 @@
 {
-  "name": "scratch-parser",
+  "name": "bb-parser",
   "description": "Parser for Scratch projects",
   "author": "MIT Media Lab",
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/LLK/scratch-parser#readme",
+  "homepage": "https://github.com/FBDY/bb-parser#readme",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LLK/scratch-parser.git"
+    "url": "https://github.com/FBDY/bb-parser.git"
   },
   "scripts": {
     "test:lint": "eslint . --ext=js",
