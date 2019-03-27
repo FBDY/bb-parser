@@ -125,6 +125,10 @@
             "type": "string",
             "description": "the message being broadcasted"
         },
+        "clone_name": {
+            "type": "string",
+            "description": "the name of the clone"
+        },
         "num_primitive": {
             "type": "array",
             "items": [
@@ -205,6 +209,18 @@
             "minItems": 3,
             "maxItems": 5
         },
+        "clone_name_primitive": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "number",
+                    "enum": [14]
+                },
+                {"type": "string", "description": "clone name"},
+                {"type": "string", "description": "clone name id"}
+            ],
+            "additionalItems": false
+        },
         "topLevelPrimitive": {
             "oneOf": [
                 {"$ref":"#/definitions/variable_primitive"},
@@ -218,7 +234,8 @@
                 {"$ref":"#/definitions/text_primitive"},
                 {"$ref":"#/definitions/broadcast_primitive"},
                 {"$ref":"#/definitions/variable_primitive"},
-                {"$ref":"#/definitions/list_primitive"}
+                {"$ref":"#/definitions/list_primitive"},
+                {"$ref":"#/definitions/clone_name_primitive"}
             ]
         },
         "block": {
@@ -415,6 +432,10 @@
                 "broadcasts": {
                     "type": "object",
                     "additionalProperties": {"$ref":"#/definitions/broadcast_message"}
+                },
+                "clones": {
+                    "type": "object",
+                    "additionalProperties": {"$ref":"#/definitions/clone_name"}
                 },
                 "comments": {
                     "type": "object",
