@@ -25,5 +25,6 @@ deploy:
     - master
     condition: $TRAVIS_EVENT_TYPE != cron
   email: $NPM_EMAIL
+  skip_cleanup: true
   tag: $NPM_TAG
   api_key: $NPM_TOKEN
