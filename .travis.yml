@@ -4,7 +4,6 @@ node_js:
   - 'node'
 env:
   global:
-  - NODE_ENV=production
   - NPM_TAG=latest
   - RELEASE_VERSION="0.0.$(date +'%Y%m%d%H%M%S')"
 before_deploy:
