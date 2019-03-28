@@ -1,5 +1,5 @@
 {
-  "name": "bb-parser",
+  "name": "@bbge/parser",
   "description": "Parser for Scratch projects",
   "author": "MIT Media Lab",
   "license": "BSD-3-Clause",
