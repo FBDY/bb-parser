@@ -121,6 +121,20 @@
             ],
             "additionalItems": false
         },
+        "dict": {
+            "type": "array",
+            "items": [
+                {"type": "string", "description": "name of the dict"},
+                {
+                    "type": "object",
+                    "description": "contents of the dict",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "additionalItems": false
+        },
         "broadcast_message": {
             "type": "string",
             "description": "the message being broadcasted"
@@ -209,6 +223,22 @@
             "minItems": 3,
             "maxItems": 5
         },
+        "dict_primitive": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "number",
+                    "enum": [15]
+                },
+                {"type": "string", "description": "dict name"},
+                {"type": "string", "description": "dict id"}
+            ],
+            "additionalItems": {
+                "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 5
+        },
         "clone_name_primitive": {
             "type": "array",
             "items": [
@@ -224,7 +254,8 @@
         "topLevelPrimitive": {
             "oneOf": [
                 {"$ref":"#/definitions/variable_primitive"},
-                {"$ref":"#/definitions/list_primitive"}
+                {"$ref":"#/definitions/list_primitive"},
+                {"$ref":"#/definitions/dict_primitive"}
             ]
         },
         "inputPrimitive": {
@@ -235,6 +266,7 @@
                 {"$ref":"#/definitions/broadcast_primitive"},
                 {"$ref":"#/definitions/variable_primitive"},
                 {"$ref":"#/definitions/list_primitive"},
+                {"$ref":"#/definitions/dict_primitive"},
                 {"$ref":"#/definitions/clone_name_primitive"}
             ]
         },
@@ -428,6 +460,10 @@
                 "lists": {
                     "type": "object",
                     "additionalProperties": {"$ref":"#/definitions/list"}
+                },
+                "dicts": {
+                    "type": "object",
+                    "additionalProperties": {"$ref":"#/definitions/dict"}
                 },
                 "broadcasts": {
                     "type": "object",
